@@ -1,0 +1,13 @@
+# https://taskfile.dev
+
+version: "3"
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - docker build -t ghcr.io/TheLonelyGhost/net-utils:latest .
+      - docker push ghcr.io/TheLonelyGhost/net-utils:latest
+    silent: true
